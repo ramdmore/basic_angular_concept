@@ -1,0 +1,25 @@
+<p>users works!</p>
+
+<button class="btn btn-sm btn-primary" routerLink="/categaries">Go to Categories</button>
+<br>
+<hr>
+<button class="btn btn-sm btn-secondary" (click)="navigateToHome()">Go to Home</button>
+
+<hr>
+<div>
+    <div>User with id is: {{user.id}}</div>
+    <div>User with name is: {{user.name}}</div>
+</div>
+
+<div>
+    <a [routerLink]="['/users',1,'ram']" [queryParams]="{page:1,search:'ram more'}" [fragment]="'dictionary'">Get Details of ram</a>
+</div>
+
+<hr>
+<div>
+    <button class="btn btn-sm btn-success" (click)="getSnehaDetails()">Get Sneha Details</button>
+</div>
+
+<div>
+    <router-outlet></router-outlet>
+</div>

@@ -1,0 +1,15 @@
+<p>data-binding works!</p>
+
+<table class="table table-bordered mt-3">
+    <thead>
+        <tr>
+            <th>username</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let user of users">
+            <td>{{user.username}}</td>
+        </tr>
+    </tbody>
+
+</table>

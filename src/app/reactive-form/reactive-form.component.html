@@ -1,0 +1,47 @@
+<p>reactive-form works!</p>
+
+<form [formGroup]="logInForm" (ngSubmit)="onSave()">
+    <div class="col-sm-6">
+        <div class="card">
+            <div class="card-body">
+                <h4 class="d-flex justify-content-center text-primary" >LogIn Form</h4>
+                <hr>
+                <div>
+                    <label for="email">Email Id</label>
+                    <input id="email" type="email" placeholder="Enter the Email" formControlName="email"
+                        class="form-control form-control-sm">
+                    <div *ngIf="getEmail()?.touched && getEmail()?.invalid" class="text-danger">
+                        <span *ngIf="getEmail()?.errors?.['required']"><small>Email Id is required...</small></span>
+                        <span *ngIf="getEmail()?.errors?.['email']">
+                            <small>Enter a valid email Id</small>
+                        </span>
+                    </div>
+                </div>
+                <div>
+                    <label for="password">Password</label>
+                    <input id="password" type="password" placeholder="Enter the Password" formControlName="password"
+                        class="form-control form-control-sm">
+                    <div *ngIf="getPassword()?.touched && getPassword()?.invalid" class="text-danger">
+                        <span *ngIf="getPassword()?.errors?.['required']"><small>Password is required</small></span>
+                        <span *ngIf="getPassword()?.errors?.['minlength']"><small>Password should be atleast 6 digits.</small></span>
+                    </div>
+                </div>
+                  <button type="submit" class="btn btn-success btn-block mt-4" [disabled]="logInForm.invalid">Submit</button>
+            </div>
+          
+        </div>
+
+    </div>
+
+</form>
+
+<hr>
+
+<div class="card">
+    <div class="card-header bg-primary">
+        Location List
+    </div>
+    <div class="card-body">
+        <app-my-table [colArray]="['Location Name','code','Action']"></app-my-table>
+    </div>
+</div>

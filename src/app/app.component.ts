@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { AuthService } from './services/auth.service';
 
 @Component({
   selector: 'app-root',
@@ -8,4 +9,15 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'routingConcept';
+
+  constructor( private authService :AuthService){}
+
+  onLoginClick(){
+    this.authService.login();
+
+  }
+
+  onLogoutClick(){
+    this.authService.logout()
+  }
 }

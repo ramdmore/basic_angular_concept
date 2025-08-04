@@ -1,0 +1,23 @@
+/* styles.css or issues.component.css */
+.table-hover tbody tr:hover {
+  background-color: #f8f9fa;
+  cursor: pointer;
+}
+
+.card {
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.card-header {
+  font-weight: bold;
+}
+
+.pagination .page-link {
+  cursor: pointer;
+}
+
+.page-item.disabled .page-link {
+  opacity: 0.6;
+  cursor: not-allowed;
+}

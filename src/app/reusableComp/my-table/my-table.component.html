@@ -1,0 +1,21 @@
+<p>my-table works!</p>
+<hr>
+<table class="table table-bordered">
+    <thead>
+        <th>Sr</th>
+        @for (item of colArray; track $index) {
+            <th>{{item}}</th>
+        }
+    </thead>
+    <tbody>
+        @for (item of gridData; track $index) {
+            <td>{{$index}}</td>
+            @for (item of colArray; track $index) {
+                <td>{{item}}</td>
+            }
+        }
+
+    </tbody>
+
+</table>
+

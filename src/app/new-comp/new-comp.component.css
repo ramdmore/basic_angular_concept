@@ -1,0 +1,25 @@
+.grid{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    justify-content: center;
+
+}
+
+.cell{
+    background: lightblue;
+    border: 1px solid black;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.cell:hover{
+    background: orange;
+}
+
+.cell.clicked{
+    background-color: green !important;
+}

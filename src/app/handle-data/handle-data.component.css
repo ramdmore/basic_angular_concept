@@ -1,0 +1,39 @@
+/* Improve table aesthetics */
+.table {
+  font-size: 0.95rem;
+  vertical-align: middle;
+}
+
+.table-hover tbody tr:hover {
+  background-color: #f4f8fb;
+}
+
+.card {
+  margin-top: 20px;
+  animation: fadeIn 0.3s ease-in-out;
+  border-radius: 12px;
+}
+
+.card-header {
+  font-size: 1rem;
+}
+
+.badge {
+  font-size: 0.8rem;
+  padding: 0.4em 0.8em;
+}
+
+.pagination .page-link {
+  cursor: pointer;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

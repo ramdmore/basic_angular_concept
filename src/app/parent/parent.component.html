@@ -1,0 +1,35 @@
+<p>parent works!</p>
+
+<button class="btn btn-primary" (click)="sendData()">Send Data</button>
+
+<form [formGroup]="myform" (ngSubmit)="onSubmit()">
+    <div class="col-sm-6">
+        <div class="card">
+            <div class="card-body">
+                <div>
+                    <label for="">Email Id</label>
+                    <input type="email" placeholder="Enter email addresses" formControlName="email"
+                        class="form-control form-control-sm mb-3">
+                        <div style="color: red;" *ngIf="email()?.touched && email()?.invalid">
+                            <small *ngIf="email()?.errors?.['required']">Email is required</small>
+                            <small *ngIf="email()?.errors?.['email']">Enter a valid email Id</small>
+                        </div>
+                </div>
+
+                <div>
+                    <label for="">Password</label>
+                    <input type="password" placeholder="Enter password" formControlName="password"
+                        class="form-control form-control-sm">
+                    <div style="color: red;" *ngIf="password()?.touched && password()?.invalid">
+                        <small *ngIf="password()?.errors?.['required']">password is required</small>
+                        <small *ngIf="password()?.errors?.['minlength']">Enter min 6 digit password</small>
+                    </div>
+                </div>
+                <button type="submit" class="btn btn-sm btn-secondary btn-block mt-3">Save</button>
+            </div>
+        </div>
+    </div>
+
+
+
+</form>

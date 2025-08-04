@@ -1,0 +1,12 @@
+<p>home works!</p>
+<div class="col-sm-6">
+    <label for="search" >Search Data</label>
+    <input type="text" #myInput placeholder="Serach data" class="form-control form-control-sm">
+    <hr>
+    <h6>Searched Data:...{{showData}}</h6>
+    <hr>
+    <ul *ngFor="let cource of filteredData">
+        <li>{{cource}}</li>
+    </ul>
+
+</div>

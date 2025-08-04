@@ -1,0 +1,20 @@
+<p>debounce works!</p>
+<hr>
+<div class="row">
+    <div class="col-sm-6">
+        <label for="search">Search...</label>
+        <input type="text" class="form-control form-control-sm mb-2" placeholder="search item...." #myInput>
+        <h6>Searched Data: {{data}}</h6>
+        <hr>
+        <ul *ngIf="filteredData.length > 0; else noData">
+            <li *ngFor="let fruit of filteredData">{{ fruit }}</li>
+        </ul>
+
+        <ng-template #noData>
+            <p>No results found.</p>
+        </ng-template>
+    </div>
+    <div class="col-sm-6">
+        <app-my-table [colArray]="tableHeadingList"></app-my-table>
+    </div>
+</div>
