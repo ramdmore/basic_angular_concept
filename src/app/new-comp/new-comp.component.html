@@ -5,14 +5,14 @@ On hover Individual block should Turn to orange background
 3. On page refresh it should retain the stage of the clicked Boxes. 
  -->
 
+<div class="card">
+  <div class="card-body p-5">
+    <div class="grid">
+      <div class="cell" *ngFor="let item of gridItems; let i = index" [class.clicked]="gridItems[i]"
+        (click)="onClick(i)">
+        {{ i + 1 }}
+      </div>
+    </div>
 
-<div class="grid">
-  <div
-    class="cell"
-    *ngFor="let item of gridItems; let i = index"
-    [class.clicked]="gridItems[i]"
-    (click)="onClick(i)"
-  >
-    {{ i + 1 }}
   </div>
 </div>
